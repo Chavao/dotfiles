@@ -6,3 +6,4 @@ alias wget='wget -c -T5'
 alias cd..="cd .."
 alias s="sublime_text"
 alias dig='dig +nostats +nocomments +nocmd'
+alias j='jobs'
