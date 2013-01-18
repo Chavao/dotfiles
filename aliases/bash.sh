@@ -1,7 +1,7 @@
 alias ws='cd /var/www'
 alias g='geany'
 alias desk='cd ~/Desktop'
-alias f='uptime ; echo ; free -m ; echo ; df -Th'
+alias f='uptime ; echo_br ; free -m ; echo_br ; df -Th'
 alias wget='wget -c -T5'
 alias cd..="cd .."
 alias s="sublime_text"

@@ -3,5 +3,5 @@ function tinyps1() {
 }
 
 function echo_br() {
-	seq -s "-" 50 | sed 's/[0-9]//g'
+	seq -s "-" 74 | sed 's/[0-9]//g'
 }
