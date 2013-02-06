@@ -21,4 +21,4 @@ function parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$DIRTY/"
 }
 
-PS1="\n> \[$BLUE\]\w \$(parse_git_branch)\n\[$PURPLE\]$ \[$RESET\]"
+PS1="\n<\#> \[$BLUE\]\w \$(parse_git_branch)\n\[$PURPLE\]$ \[$RESET\]"
