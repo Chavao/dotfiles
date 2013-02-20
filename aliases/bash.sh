@@ -12,3 +12,4 @@ alias cd..="cd .."
 alias s="sublime_text"
 alias dig='dig +nostats +nocomments +nocmd'
 alias j='jobs'
+alias c='clear'
