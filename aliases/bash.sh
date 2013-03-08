@@ -13,3 +13,4 @@ alias s="sublime_text"
 alias dig='dig +nostats +nocomments +nocmd'
 alias j='jobs'
 alias c='clear'
+alias l='ls -CFlart'
