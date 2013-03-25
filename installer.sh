@@ -63,10 +63,29 @@ function copy_hg_config() {
 }
 
 function install_screen_config() {
-	echo;
+	if [ -f $HOME/.screenrc ]
+	then
+		printf "Overwrite ~/.screenrc? [y/N]: "
+		read INSTALLER_SCREEN_OVERWRITE
+
+		if [ ! -z $INSTALLER_SCREEN_OVERWRITE ]
+		then
+			if [ $INSTALLER_SCREEN_OVERWRITE == 'y' ]
+			then
+				copy_screen_config
+			fi
+		fi
+	else
+		copy_screen_config
+	fi
+}
+
+function copy_screen_config() {
+	cat $(echo $INSTALLER_PATH)templates/screenrc > $HOME/.screenrc
 }
 
 function install_vimfiles() {
+	# TODO: Instalation via Git
 	echo;
 }
 
