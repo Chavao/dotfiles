@@ -2,6 +2,24 @@
 
 export INSTALLER_PATH=$(echo $0 | sed 's/installer\.sh//g')
 
+function confirm_overwrite() {
+    if [ -f $HOME/.$1 ]
+    then
+        printf "Overwrite ~/.$1? [y/N]: "
+        read INSTALLER_OVERWRITE
+
+        if [ ! -z $INSTALLER_OVERWRITE ]
+        then
+            if [ $INSTALLER_OVERWRITE == 'y' ]
+            then
+                $2
+            fi
+        fi
+    else
+        $2
+    fi
+}
+
 function install_git_config() {
     printf "Installing gitconfig file...\n"
     printf "Real name: "
@@ -9,21 +27,7 @@ function install_git_config() {
     printf "E-mail: "
     read INSTALLER_GIT_EMAIL
 
-    if [ -f $HOME/.gitconfig ]
-    then
-        printf "Overwrite ~/.gitconfig? [y/N]: "
-        read INSTALLER_GIT_OVERWRITE
-
-        if [ ! -z $INSTALLER_GIT_OVERWRITE ]
-        then
-            if [ $INSTALLER_GIT_OVERWRITE == 'y' ]
-            then
-                copy_git_config
-            fi
-        fi
-    else
-        copy_git_config
-    fi
+    confirm_overwrite gitconfig copy_git_config
 }
 
 function copy_git_config() {
@@ -39,21 +43,7 @@ function install_hg_config() {
     printf "E-mail: "
     read INSTALLER_HG_EMAIL
 
-    if [ -f $HOME/.hgrc ]
-    then
-        printf "Overwrite ~/.hgrc? [y/N]: "
-        read INSTALLER_HG_OVERWRITE
-
-        if [ ! -z $INSTALLER_HG_OVERWRITE ]
-        then
-            if [ $INSTALLER_HG_OVERWRITE == 'y' ]
-            then
-                copy_hg_config
-            fi
-        fi
-    else
-        copy_hg_config
-    fi
+    confirm_overwrite hgrc copy_hg_config
 }
 
 function copy_hg_config() {
@@ -63,21 +53,7 @@ function copy_hg_config() {
 }
 
 function install_screen_config() {
-    if [ -f $HOME/.screenrc ]
-    then
-        printf "Overwrite ~/.screenrc? [y/N]: "
-        read INSTALLER_SCREEN_OVERWRITE
-
-        if [ ! -z $INSTALLER_SCREEN_OVERWRITE ]
-        then
-            if [ $INSTALLER_SCREEN_OVERWRITE == 'y' ]
-            then
-                copy_screen_config
-            fi
-        fi
-    else
-        copy_screen_config
-    fi
+    confirm_overwrite screenrc copy_screen_config
 }
 
 function copy_screen_config() {
