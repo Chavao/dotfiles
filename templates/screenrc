@@ -3,3 +3,4 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'   # tell screen how to 
 defbce on    # use current bg color for erased chars
 altscreen on
 vbell off
+termcapinfo xterm* ti@:te@
