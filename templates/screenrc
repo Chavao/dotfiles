@@ -4,3 +4,7 @@ defbce on    # use current bg color for erased chars
 altscreen on
 vbell off
 termcapinfo xterm* ti@:te@
+startup_message off
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d-%m-%Y %{W} %c %{g}]'
