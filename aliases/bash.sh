@@ -4,7 +4,6 @@ then
 else
     alias ws='cd /var/www'
 fi
-alias g='geany'
 alias desk='cd ~/Desktop'
 alias f='uptime ; echo_br ; free -m ; echo_br ; df -Th'
 alias wget='wget -c -T5'
