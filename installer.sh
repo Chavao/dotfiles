@@ -61,8 +61,7 @@ function copy_screen_config() {
 }
 
 function install_vimfiles() {
-    # TODO: Instalation via Git
-    echo;
+    curl -k https://raw.githubusercontent.com/Chavao/vimfiles/master/install.sh | sh
 }
 
 function install_dotfiles() {
