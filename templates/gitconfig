@@ -8,6 +8,11 @@
 	history-view-vpane-position = 244
 	file-view-vpane-position = 629
 [color]
-	ui = auto
+    ui = auto
+[merge]
+    tool = meld
+    conflictstyle = diff3
 [mergetool]
-	keepBackup = false
+    keepBackup = false
+[branch]
+    autosetuprebase = always
