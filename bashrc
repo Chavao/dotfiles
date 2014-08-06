@@ -1,8 +1,4 @@
-# sudo localedef -i pt_BR -f UTF-8 pt_BR.UTF-8
-export LC_ALL=pt_BR.utf8
-export LANG=$LC_ALL
-
-for i in ~/dotfiles/{functions,aliases}/*.sh; do source $i; done
+source ~/dotfiles/defaultrc
 
 GRAY="\033[1;30m"
 RED="\033[1;31m"

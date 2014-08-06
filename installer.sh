@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 export INSTALLER_PATH=$(echo $0 | sed 's/installer\.sh//g')
 
