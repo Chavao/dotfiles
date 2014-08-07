@@ -7,14 +7,19 @@
     cim = commit -m
     st = status
     br = branch
+    d = diff
 [giggle]
     main-window-maximized = true
     main-window-geometry = 0x0+0+0
     main-window-view = HistoryView
     history-view-vpane-position = 244
     file-view-vpane-position = 629
+[core]
+    pager = less -FRSX
+    editor = vim
 [color]
     ui = auto
+    pager = true
 [merge]
     tool = meld
     conflictstyle = diff3
