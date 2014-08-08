@@ -1,4 +1,4 @@
-alias g='git status'
+alias g='git'
 alias gg='git status'
 alias ggs='git status -s'
 alias gco='git checkout'
