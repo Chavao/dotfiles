@@ -2,11 +2,12 @@
     name = {{USERNAME}}
     email = {{EMAIL}}
 [alias]
-    co = checkout
     ci = commit
     cim = commit -m
-    st = status
-    br = branch
+    a = add
+    c = checkout
+    s = status
+    b = branch
     d = diff
 [giggle]
     main-window-maximized = true
