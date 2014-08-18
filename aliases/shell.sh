@@ -1,11 +1,16 @@
-alias desk='cd ~/Desktop'
-alias f='uptime ; echo_br ; free -m ; echo_br ; df -Th'
-alias wget='wget -c -T5'
-alias cd..="cd .."
-alias dig='dig +nostats +nocomments +nocmd'
+# Shell
 alias j='jobs'
 alias c='clear'
 alias l='ls -CFlartsh'
+alias d='cd'
+alias cd..="cd .."
+
+# Commands
+alias wget='wget -c -T5'
+alias dig='dig +nostats +nocomments +nocmd'
+alias serv='python -m SimpleHTTPServer'
+
+# Folders
 alias down='cd ~/Downloads'
 alias db='cd ~/Dropbox'
-alias serv='python -m SimpleHTTPServer'
+alias desk='cd ~/Desktop'
