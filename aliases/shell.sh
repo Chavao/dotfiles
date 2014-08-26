@@ -4,6 +4,7 @@ alias c='clear'
 alias l='ls -CFlartsh'
 alias d='cd'
 alias cd..="cd .."
+alias grepi='grep -i'
 
 # Commands
 alias wget='wget -c -T5'
