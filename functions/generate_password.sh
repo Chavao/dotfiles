@@ -1,3 +1,4 @@
 function generate_password {
-    head /dev/urandom | sha224sum | cut -d " " -f 1
+    p_pass=$(head /dev/urandom | base64 | awk '{ sub ("\\\\$", ""); printf "%s", $0 } END { print "" }')
+    echo ${p_pass:0:499}
 }
