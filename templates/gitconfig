@@ -17,9 +17,6 @@
 [color]
     ui = auto
     pager = true
-[merge]
-    tool = meld
-    conflictstyle = diff3
 [mergetool]
     keepBackup = false
 [branch]
