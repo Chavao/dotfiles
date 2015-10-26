@@ -5,6 +5,7 @@ alias l='ls -CFlartsh'
 alias d='cd'
 alias cd..="cd .."
 alias grepi='grep -i'
+alias .='source'
 
 # Commands
 alias wget='wget -c -T5'
