@@ -13,7 +13,7 @@
     w = whatchanged
 [core]
     pager = less -FRSX
-    editor = vim
+    editor = pedit
 [color]
     ui = auto
     pager = true

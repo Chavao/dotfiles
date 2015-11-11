@@ -64,11 +64,17 @@ function install_vimfiles() {
     curl -k https://raw.githubusercontent.com/Chavao/vimfiles/master/install.sh | sh
 }
 
+function install_pedit() {
+    git clone https://github.com/Chavao/pedit.git ~/.pedit
+    sudo ln -s ~/.pedit/pedit.py /usr/bin/pedit
+}
+
 function install_dotfiles() {
     install_git_config
     install_hg_config
     install_screen_config
     install_vimfiles
+    install_pedit
 }
 
 install_dotfiles
