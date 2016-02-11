@@ -69,12 +69,17 @@ function install_pedit() {
     sudo ln -s ~/.pedit/pedit.py /usr/bin/pedit
 }
 
+function install_diff_so_fancy() {
+    sudo npm install -g diff-so-fancy
+}
+
 function install_dotfiles() {
     install_git_config
     install_hg_config
     install_screen_config
     install_vimfiles
     install_pedit
+    install_diff_so_fancy
 }
 
 install_dotfiles
