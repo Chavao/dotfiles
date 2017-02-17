@@ -36,22 +36,6 @@ function copy_git_config() {
     sed s/{{EMAIL}}/$INSTALLER_GIT_EMAIL/g > $HOME/.gitconfig
 }
 
-function install_hg_config() {
-    printf "Installing hgrc file...\n"
-    printf "Real name: "
-    read INSTALLER_HG_REAL_NAME
-    printf "E-mail: "
-    read INSTALLER_HG_EMAIL
-
-    confirm_overwrite hgrc copy_hg_config
-}
-
-function copy_hg_config() {
-    cat $(echo $INSTALLER_PATH)templates/hgrc | 
-    sed s/{{USERNAME}}/$INSTALLER_HG_REAL_NAME/g | 
-    sed s/{{EMAIL}}/$INSTALLER_HG_EMAIL/g > $HOME/.hgrc
-}
-
 function install_screen_config() {
     confirm_overwrite screenrc copy_screen_config
 }
@@ -75,7 +59,6 @@ function install_diff_so_fancy() {
 
 function install_dotfiles() {
     install_git_config
-    install_hg_config
     install_screen_config
     install_vimfiles
     install_pedit
