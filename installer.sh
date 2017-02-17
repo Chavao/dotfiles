@@ -36,14 +36,6 @@ function copy_git_config() {
     sed s/{{EMAIL}}/$INSTALLER_GIT_EMAIL/g > $HOME/.gitconfig
 }
 
-function install_screen_config() {
-    confirm_overwrite screenrc copy_screen_config
-}
-
-function copy_screen_config() {
-    cat $(echo $INSTALLER_PATH)templates/screenrc > $HOME/.screenrc
-}
-
 function install_vimfiles() {
     curl -k https://raw.githubusercontent.com/Chavao/vimfiles/master/install.sh | sh
 }
@@ -59,7 +51,6 @@ function install_diff_so_fancy() {
 
 function install_dotfiles() {
     install_git_config
-    install_screen_config
     install_vimfiles
     install_pedit
     install_diff_so_fancy
