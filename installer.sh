@@ -49,11 +49,6 @@ function install_vimfiles() {
     curl -k https://raw.githubusercontent.com/Chavao/vimfiles/master/install.sh | sh
 }
 
-function install_pedit() {
-    git clone https://github.com/Chavao/pedit.git ~/.pedit
-    sudo ln -s ~/.pedit/pedit.py /usr/bin/pedit
-}
-
 function install_diff_so_fancy() {
     sudo npm install -g diff-so-fancy
 }
@@ -63,7 +58,6 @@ function install_dotfiles() {
     install_tmux_plugin_manager
     install_tmux_config
     install_vimfiles
-    install_pedit
     install_diff_so_fancy
 }
 
