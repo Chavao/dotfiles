@@ -22,8 +22,6 @@ function confirm_overwrite() {
 
 function install_git_config() {
     printf "Installing gitconfig file...\n"
-    printf "Real name: "
-    read INSTALLER_GIT_REAL_NAME
     printf "E-mail: "
     read INSTALLER_GIT_EMAIL
 
@@ -32,7 +30,6 @@ function install_git_config() {
 
 function copy_git_config() {
     cat $(echo $INSTALLER_PATH)templates/gitconfig | 
-    sed s/{{USERNAME}}/$INSTALLER_GIT_REAL_NAME/g | 
     sed s/{{EMAIL}}/$INSTALLER_GIT_EMAIL/g > $HOME/.gitconfig
 }
 
