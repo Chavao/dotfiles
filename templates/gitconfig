@@ -1,5 +1,5 @@
 [user]
-    name = Diego Chavão
+    name = {{USERNAME}}
     email = {{EMAIL}}
 [alias]
     ci = commit
