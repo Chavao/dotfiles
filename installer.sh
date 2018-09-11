@@ -30,6 +30,10 @@ function install_git_config() {
     confirm_overwrite gitconfig copy_git_config
 }
 
+function install_gitignore_global() {
+    cp $(echo $INSTALLER_PATH)templates/gitignore_global $HOME/.gitignore_global
+}
+
 function copy_git_config() {
     cat $(echo $INSTALLER_PATH)templates/gitconfig | 
     sed s/{{USERNAME}}/$INSTALLER_GIT_REAL_NAME/g | 
@@ -58,6 +62,7 @@ function install_diff_so_fancy() {
 
 function install_dotfiles() {
     install_git_config
+    install_gitignore_global
     install_tmux_plugin_manager
     install_tmux_config
     install_vimfiles
