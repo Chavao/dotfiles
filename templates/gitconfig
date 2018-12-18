@@ -20,5 +20,5 @@
     pager = true
 [mergetool]
     keepBackup = false
-[branch]
-    autosetuprebase = never
+[pull]
+    rebase = true
