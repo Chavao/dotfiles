@@ -1,0 +1,4 @@
+#!/bin/sh
+
+git fetch upstream
+git pull --rebase upstream $(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
