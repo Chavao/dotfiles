@@ -9,7 +9,7 @@ function pushf() {
 
    if [ ! -z $PUSH_FORCE_BRANCH ]
    then
-      if [ $PUSH_FORCE_BRANCH == 'y' ]
+      if [ $PUSH_FORCE_BRANCH '==' 'y' ]
       then
          echo "git push --force -u origin $(git rev-parse --symbolic-full-name --abbrev-ref HEAD)"
          git push --force -u origin $(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
