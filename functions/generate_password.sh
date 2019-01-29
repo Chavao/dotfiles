@@ -1,6 +1,6 @@
 function generate_password {
     if [ -z "$1" ]; then
-        FINAL=499
+        FINAL=500
     else
         FINAL=$1
     fi
