@@ -16,3 +16,13 @@ function pushf() {
        fi
     fi
 }
+
+function fire {
+    git stash
+    git branch -D fire-alarm &> /dev/null
+    git checkout -b fire-alarm
+    git stash pop
+    git add .
+    git commit -m 'Ta pegando fogo, bicho!'
+    git push -u origin $(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+}
