@@ -13,4 +13,6 @@ case "${_UNAME_SYSTEM_TYPE}" in
         ;;
 esac
 
-for i in ~/dotfiles/{functions,aliases}/*.sh; do source $i; done
+for i in $HOME/dotfiles/{functions,aliases}/*.sh; do source $i; done
+
+export PATH="$PATH:$HOME/dotfiles/bin"
