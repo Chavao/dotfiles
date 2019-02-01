@@ -1,4 +1,4 @@
-To install add the following line to ~/.bashrc or ~/.zshrc
+To install add the following line to ~/.zshrc
 
-    # Loading bashrc config file
+    # Loading zshrc config file
     source ~/dotfiles/loader.sh
