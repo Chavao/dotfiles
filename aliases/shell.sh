@@ -15,5 +15,4 @@ alias pass='gnome-keyring-daemon -r -d'
 
 # Folders
 alias down='cd ~/Downloads'
-alias db='cd ~/Dropbox'
 alias desk='cd ~/Desktop'
