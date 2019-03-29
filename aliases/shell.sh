@@ -16,3 +16,6 @@ alias pass='gnome-keyring-daemon -r -d'
 # Folders
 alias down='cd ~/Downloads'
 alias desk='cd ~/Desktop'
+
+# Tools
+alias weather='curl -4 "http://wttr.in/Rio+de+Janeiro"'
