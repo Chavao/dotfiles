@@ -1,0 +1,3 @@
+#!/bin/sh
+# TODO: Add Linux notification
+osascript -e 'display notification "Execução finalizada!" with title "iTerm2"'
