@@ -10,7 +10,6 @@ alias .='source'
 # Commands
 alias wget='wget -c -T5'
 alias dig='dig +nostats +nocomments +nocmd'
-alias serv='python -m SimpleHTTPServer'
 alias pass='gnome-keyring-daemon -r -d'
 
 # Folders
