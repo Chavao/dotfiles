@@ -8,11 +8,15 @@ try:
     config = configparser.ConfigParser()
     config.read(".git/config")
 
-    url = config.get('remote "origin"', "url")
+    for key in config.keys():
+        try:
+            url = config.get(key, "url")
 
-    url = re.sub(":", '/', url)
-    url = re.sub("^.*@", 'https://', url)
+            url = re.sub(":", '/', url)
+            url = re.sub("^.*@", 'https://', url)
 
-    print(url)
+            print(f"{key}: {url}")
+        except:
+            pass
 except:
     print('You are not in the root of a git project')
