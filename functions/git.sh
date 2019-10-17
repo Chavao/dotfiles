@@ -17,6 +17,17 @@ function pushf() {
     fi
 }
 
+function reb() {
+    if [ -z "$1" ]; then
+        TO_COMMIT=5
+    else
+        TO_COMMIT=$1
+    fi
+    echo "Running rebase..."
+    echo "git rebase -i HEAD~$TO_COMMIT"
+    git rebase -i HEAD~$TO_COMMIT
+}
+
 function fire {
     git stash
     git branch -D fire-alarm &> /dev/null
