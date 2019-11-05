@@ -3,6 +3,16 @@
 import configparser
 import re
 
+def _format_url(url):
+    url = re.sub(":", '/', url)
+    url = re.sub("^.*@", 'https://', url)
+    return url.strip()
+
+def _format_key(key):
+    key = re.sub('"', '', key)
+    key = re.sub('branch', '', key)
+    key = re.sub('remote', '', key)
+    return key.strip()
 
 try:
     config = configparser.ConfigParser()
@@ -12,10 +22,7 @@ try:
         try:
             url = config.get(key, "url")
 
-            url = re.sub(":", '/', url)
-            url = re.sub("^.*@", 'https://', url)
-
-            print(f"{key}: {url}")
+            print(f"{_format_key(key)}: {_format_url(url)}")
         except:
             pass
 except:
