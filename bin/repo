@@ -3,6 +3,9 @@
 import configparser
 import re
 
+_CYAN = '\x1b[36m'
+_RESET = '\x1b[0m'
+
 def _format_url(url):
     url = re.sub(":", '/', url)
     url = re.sub("^.*@", 'https://', url)
@@ -22,7 +25,7 @@ try:
         try:
             url = config.get(key, "url")
 
-            print(f"{_format_key(key)}: {_format_url(url)}")
+            print(f"{_CYAN}{_format_key(key)}{_RESET}: {_format_url(url)}")
         except:
             pass
 except:
