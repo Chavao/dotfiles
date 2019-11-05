@@ -22,11 +22,12 @@ try:
     config.read(".git/config")
 
     for key in config.keys():
-        try:
-            url = config.get(key, "url")
+        if not key.startswith('submodule'):
+            try:
+                url = config.get(key, "url")
 
-            print(f"{_CYAN}{_format_key(key)}{_RESET}: {_format_url(url)}")
-        except:
-            pass
+                print(f"{_CYAN}{_format_key(key)}{_RESET}: {_format_url(url)}")
+            except:
+                pass
 except:
     print('You are not in the root of a git project')
