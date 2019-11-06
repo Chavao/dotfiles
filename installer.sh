@@ -44,15 +44,15 @@ function install_vimfiles() {
     curl -k https://raw.githubusercontent.com/Chavao/vimfiles/master/install.sh | sh
 }
 
-function install_diff_so_fancy() {
-    sudo npm install -g diff-so-fancy
+function install_prezto() {
+    curl -k https://raw.githubusercontent.com/Chavao/prezto/master/install.sh | sh
 }
 
 function install_dotfiles() {
     install_git_config
     install_gitignore_global
     install_vimfiles
-    install_diff_so_fancy
+    install_prezto
 }
 
 install_dotfiles
