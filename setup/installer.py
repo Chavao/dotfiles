@@ -15,7 +15,7 @@ def git_config():
                 "{{EMAIL}}", email
             )
 
-    with open('../.gitconfig', 'r+') as f:
+    with open('../.gitconfig', 'w+') as f:
         f.write(file_content)
 
     print('Git config installed successfully')
@@ -25,7 +25,7 @@ def gitignore_global():
     with open('templates/gitignore_global') as r:
         template = r.read()
 
-    with open('../.gitignore_global', 'r+') as f:
+    with open('../.gitignore_global', 'w+') as f:
         f.write(template)
 
     print('Gitignore global installed successfully')
