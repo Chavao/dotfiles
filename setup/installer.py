@@ -1,3 +1,4 @@
+import os
 from PyInquirer import prompt
 
 
@@ -31,7 +32,8 @@ def gitignore_global():
 
 
 def vimfiles():
-    print("Installing vimfiles")
+    os.system('curl -k https://raw.githubusercontent.com/Chavao/vimfiles/master/install.sh | sh')
+    print('Vimfiles installed successfully')
 
 
 def prezto():
@@ -61,7 +63,7 @@ modules_select = [
                 'value': 'gitignore_global'
             },
             {
-                'name': 'Vim files',
+                'name': 'Vimfiles',
                 'value': 'vimfiles'
             },
             {
