@@ -2,7 +2,22 @@ from PyInquirer import prompt
 
 
 def git_config():
-    print("Installing git config")
+    name = input("Real name: ")
+    email = input("E-mail: ")
+
+    with open('templates/gitconfig') as r:
+        template = r.read()
+
+        file_content = template.replace(
+                "{{USERNAME}}", name
+            ).replace(
+                "{{EMAIL}}", email
+            )
+
+    with open('../.gitconfig', 'r+') as f:
+        f.write(file_content)
+
+    print('Git config installed successfully')
 
 
 def gitignore_global():
