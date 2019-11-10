@@ -21,7 +21,13 @@ def git_config():
 
 
 def gitignore_global():
-    print("Intalling gitignore global")
+    with open('templates/gitignore_global') as r:
+        template = r.read()
+
+    with open('../.gitignore_global', 'r+') as f:
+        f.write(template)
+
+    print('Gitignore global installed successfully')
 
 
 def vimfiles():
