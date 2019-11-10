@@ -37,7 +37,8 @@ def vimfiles():
 
 
 def prezto():
-    print("Installing prezto")
+    os.system('curl -k https://raw.githubusercontent.com/Chavao/prezto/master/install.sh | sh')
+    print('Prezto installed successfully')
 
 
 _FUNCTIONS = {
