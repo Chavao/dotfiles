@@ -22,3 +22,5 @@
     keepBackup = false
 [pull]
     rebase = true
+[cola]
+    spellcheck = false
