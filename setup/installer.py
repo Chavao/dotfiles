@@ -3,7 +3,7 @@ from PyInquirer import prompt
 
 
 def git_config():
-    name = input("Real name: ")
+    name = input("Real name (default: Diego Chavão): ") or "Diego Chavão"
     email = input("E-mail: ")
 
     with open('templates/gitconfig') as r:
