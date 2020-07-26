@@ -1,18 +1,7 @@
 #!/usr/bin/env python
 
-try:
-    # Python 3
-    from http.server import (HTTPServer,
-                             SimpleHTTPRequestHandler,
-                             test as test_orig)
-    import sys
-
-    def test(*args):
-        test_orig(*args, port=8000)
-except ImportError:
-    # Python 2
-    from BaseHTTPServer import HTTPServer, test
-    from SimpleHTTPServer import SimpleHTTPRequestHandler
+import sys
+from http.server import HTTPServer, SimpleHTTPRequestHandler, test
 
 
 class CORSRequestHandler(SimpleHTTPRequestHandler):
@@ -22,4 +11,4 @@ class CORSRequestHandler(SimpleHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    test(CORSRequestHandler, HTTPServer)
+    test(CORSRequestHandler, HTTPServer, port=8631)
