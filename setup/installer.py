@@ -2,6 +2,11 @@ import os
 from PyInquirer import prompt
 
 
+def basic_tools():
+    os.system('sudo apt install -y xclip vim git')
+    print('Basic tools installed successfully')
+
+
 def git_config():
     name = input("Real name (default: Diego Chavão): ") or "Diego Chavão"
     email = input("E-mail: ")
@@ -42,6 +47,7 @@ def prezto():
 
 
 _FUNCTIONS = {
+    'basic_tools': basic_tools,
     'git_config': git_config,
     'gitignore_global': gitignore_global,
     'vimfiles': vimfiles,
@@ -55,6 +61,10 @@ modules_select = [
         'message': 'Choose the modules to install',
         'name': 'modules',
         'choices': [
+            {
+                'name': 'Basic tools',
+                'value': 'basic_tools'
+            },
             {
                 'name': 'Git config',
                 'value': 'git_config'
