@@ -11,6 +11,7 @@ alias .='source'
 alias wget='wget -c -T5'
 alias dig='dig +nostats +nocomments +nocmd'
 alias pass='gnome-keyring-daemon -r -d'
+alias xclip='xclip -selection c'
 
 # Folders
 alias down='cd ~/Downloads'
