@@ -25,5 +25,7 @@
     keepBackup = false
 [pull]
     rebase = true
+[url "ssh://gitlab@gitlab.globoi.com/"]
+    insteadOf = https://gitlab.globoi.com/
 [cola]
     spellcheck = false
