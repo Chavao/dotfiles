@@ -11,6 +11,9 @@
     d = diff
     p = push -u
     w = whatchanged
+    g = "!g() { \
+            git grep $1 ':(exclude)*test.js' ':(exclude)*test*.py'; \
+        }; g"
 [core]
     pager = less -FRSX
     editor = vim
