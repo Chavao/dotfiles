@@ -11,7 +11,7 @@ function pushf() {
    then
       if [ $PUSH_FORCE_BRANCH '==' 'y' ]
       then
-         echo "git push --force -u origin $(git rev-parse --symbolic-full-name --abbrev-ref HEAD)"
+         echo "git push --force-with-lease -u origin $(git rev-parse --symbolic-full-name --abbrev-ref HEAD)"
          git push --force -u origin $(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
        fi
     fi
