@@ -1,5 +1,5 @@
 import os
-from PyInquirer import prompt
+from simple_term_menu import TerminalMenu
 
 
 def basic_tools():
@@ -46,45 +46,35 @@ def prezto():
     print('Prezto installed successfully')
 
 
-_FUNCTIONS = {
-    'basic_tools': basic_tools,
-    'git_config': git_config,
-    'gitignore_global': gitignore_global,
-    'vimfiles': vimfiles,
-    'prezto': prezto,
-}
-
-
-modules_select = [
-    {
-        'type': 'checkbox',
-        'message': 'Choose the modules to install',
-        'name': 'modules',
-        'choices': [
-            {
-                'name': 'Basic tools',
-                'value': 'basic_tools'
-            },
-            {
-                'name': 'Git config',
-                'value': 'git_config'
-            },
-            {
-                'name': 'Git ignore global',
-                'value': 'gitignore_global'
-            },
-            {
-                'name': 'Vimfiles',
-                'value': 'vimfiles'
-            },
-            {
-                'name': 'Prezto',
-                'value': 'prezto'
-            }
-        ],
-    }
+_FUNCTIONS = [
+    basic_tools,
+    git_config,
+    gitignore_global,
+    vimfiles,
+    prezto
 ]
 
-modules = prompt(modules_select)
-for module in modules.get('modules'):
-    _FUNCTIONS.get(module)()
+def main():
+    options = [
+        'Basic tools',
+        'Git config',
+        'Git ignore global',
+        'Vimfiles',
+        'Prezto',
+        'Exit'
+    ]
+    terminal_menu = TerminalMenu(options)
+
+    while True:
+        menu_entry_index = terminal_menu.show()
+
+        if menu_entry_index == 5:
+            print('Bye...')
+            break
+
+        _FUNCTIONS[menu_entry_index]()
+
+
+if __name__ == "__main__":
+    main()
+
