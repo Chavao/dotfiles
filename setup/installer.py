@@ -3,7 +3,7 @@ from PyInquirer import prompt
 
 
 def basic_tools():
-    os.system('sudo apt install -y xclip neovim git')
+    os.system('sudo apt install -y xclip neovim git pandoc lynx')
     print('Basic tools installed successfully')
 
 
