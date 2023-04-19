@@ -65,11 +65,13 @@ def main():
     ]
     terminal_menu = TerminalMenu(options)
 
+    print('\nWhat do you want to install?\n')
+
     while True:
         menu_entry_index = terminal_menu.show()
 
         if menu_entry_index == 5:
-            print('Bye...')
+            print('Bye... 👋\n')
             break
 
         _FUNCTIONS[menu_entry_index]()
