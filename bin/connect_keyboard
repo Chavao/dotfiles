@@ -1,0 +1,5 @@
+#!/bin/sh
+
+nohup bluetoothctl scan bredr > /dev/null 2>&1 &
+sleep 3
+bluetoothctl connect 34:88:5D:C2:5F:7A
