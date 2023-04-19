@@ -33,11 +33,7 @@ def git_config():
 
 
 def gitignore_global():
-    with open('templates/gitignore_global') as r:
-        template = r.read()
-
-    with open('$HOME/.gitignore_global', 'w+') as f:
-        f.write(template)
+    os.system('cp templates/gitignore_global $HOME/.gitignore_global')
 
     print('Gitignore global installed successfully')
 
