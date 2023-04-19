@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xdotool mousemove 500 500

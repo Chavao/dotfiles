@@ -3,7 +3,7 @@ from simple_term_menu import TerminalMenu
 
 
 def basic_tools():
-    os.system('sudo apt install -y xclip neovim git pandoc lynx')
+    os.system('sudo apt install -y xclip neovim git pandoc lynx xdotool')
     print('Basic tools installed successfully')
 
 
