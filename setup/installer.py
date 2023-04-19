@@ -3,7 +3,13 @@ from simple_term_menu import TerminalMenu
 
 
 def basic_tools():
+    print('Installing linux tools')
     os.system('sudo apt install -y xclip neovim git pandoc lynx xdotool')
+
+    print('Creating non-git aliases file')
+    os.system('mkdir -p $HOME/Projects')
+    os.system('cp templates/aliases $HOME/.aliases')
+
     print('Basic tools installed successfully')
 
 
@@ -20,7 +26,7 @@ def git_config():
                 "{{EMAIL}}", email
             )
 
-    with open('../.gitconfig', 'w+') as f:
+    with open('$HOME/.gitconfig', 'w+') as f:
         f.write(file_content)
 
     print('Git config installed successfully')
@@ -30,7 +36,7 @@ def gitignore_global():
     with open('templates/gitignore_global') as r:
         template = r.read()
 
-    with open('../.gitignore_global', 'w+') as f:
+    with open('$HOME/.gitignore_global', 'w+') as f:
         f.write(template)
 
     print('Gitignore global installed successfully')
