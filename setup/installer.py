@@ -58,12 +58,12 @@ _FUNCTIONS = [
 
 def main():
     options = [
-        'Basic tools',
-        'Git config',
-        'Git ignore global',
-        'Vimfiles',
-        'Prezto',
-        'Exit'
+        '🔧 Basic tools',
+        '💾 Git config',
+        '🚫 Git ignore global',
+        '💻 Vimfiles',
+        '💲 Prezto',
+        '👋 Exit'
     ]
     terminal_menu = TerminalMenu(options)
 
