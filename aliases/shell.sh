@@ -19,3 +19,4 @@ alias desk='cd ~/Desktop'
 
 # Tools
 alias weather='curl -4 "https://wttr.in/Freguesia"'
+alias myip='curl https://ifconfig.me'
