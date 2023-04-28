@@ -18,4 +18,4 @@ alias down='cd ~/Downloads'
 alias desk='cd ~/Desktop'
 
 # Tools
-alias weather='curl -4 "http://wttr.in/Freguesia"'
+alias weather='curl -4 "https://wttr.in/Freguesia"'
