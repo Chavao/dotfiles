@@ -10,6 +10,10 @@ def basic_tools():
     os.system('mkdir -p $HOME/Projects')
     os.system('cp templates/aliases $HOME/.aliases')
 
+    print('Setting up Tilix')
+    os.system('mkdir -p $HOME/.config/tilix/schemes')
+    os.system('ln -sf $HOME/dotfiles/settings/tilix/default.json $HOME/.config/tilix/schemes/default.json')
+
     print('Basic tools installed successfully')
 
 
