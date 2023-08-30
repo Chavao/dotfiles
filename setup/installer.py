@@ -4,7 +4,7 @@ from simple_term_menu import TerminalMenu
 
 def basic_tools():
     print('Installing linux tools')
-    os.system('sudo apt install -y xclip neovim git pandoc lynx xdotool flameshot blueman fonts-firacode')
+    os.system('sudo apt install -y xclip neovim git pandoc lynx xdotool flameshot blueman fonts-firacode tilix')
 
     print('Creating non-git aliases file')
     os.system('mkdir -p $HOME/Projects')
