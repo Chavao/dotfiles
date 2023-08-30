@@ -76,7 +76,7 @@ def main():
     while True:
         menu_entry_index = terminal_menu.show()
 
-        if menu_entry_index == 5:
+        if menu_entry_index == 5 or menu_entry_index is None:
             print('Bye... 👋\n')
             break
 
