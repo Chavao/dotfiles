@@ -42,6 +42,11 @@ def gitignore_global():
     print('Gitignore global installed successfully')
 
 
+def awesome():
+    os.system('curl -k https://raw.githubusercontent.com/Chavao/awesome/master/install.sh | sh')
+    print('Awesome installed successfully')
+
+
 def vimfiles():
     os.system('curl -k https://raw.githubusercontent.com/Chavao/vimfiles/master/install.sh | sh')
     print('Vimfiles installed successfully')
@@ -56,6 +61,7 @@ _FUNCTIONS = [
     basic_tools,
     git_config,
     gitignore_global,
+    awesome,
     vimfiles,
     prezto
 ]
@@ -65,6 +71,7 @@ def main():
         '🔧 Basic tools',
         '💾 Git config',
         '🚫 Git ignore global',
+        '🤩 Awesome',
         '💻 Vimfiles',
         '💲 Prezto',
         '👋 Exit'

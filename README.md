@@ -26,4 +26,3 @@ make install
 ### To do
 
 1. Improve instalation of prezto to keep up to date with original repository
-1. Add personal awesomewm setup
