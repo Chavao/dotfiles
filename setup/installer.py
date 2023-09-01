@@ -14,6 +14,9 @@ def basic_tools():
     os.system('mkdir -p $HOME/.config/tilix/schemes')
     os.system('ln -sf $HOME/dotfiles/settings/tilix/default.json $HOME/.config/tilix/schemes/default.json')
 
+    print('Setting up LXQt')
+    os.system('ln -sf $HOME/dotfiles/settings/lxqt $HOME/.config/lxqt')
+
     print('Basic tools installed successfully')
 
 
