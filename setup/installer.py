@@ -1,7 +1,23 @@
 import os
+import functools
+
 from simple_term_menu import TerminalMenu
 
 
+def confirm(name):
+    def actual_decorator(func):
+        @functools.wraps(func)
+        def wrapper():
+            print(f'Confirm installing: {name}? [y/N]: ', end='')
+            answer = input()
+
+            if answer == 'y' or answer == 'Y':
+                func()
+        return wrapper
+    return actual_decorator
+
+
+@confirm('Basic tools')
 def basic_tools():
     print('Installing linux tools')
     os.system('sudo apt install -y xclip neovim git pandoc lynx xdotool flameshot blueman fonts-firacode tilix')
@@ -20,6 +36,7 @@ def basic_tools():
     print('Basic tools installed successfully')
 
 
+@confirm('Git config')
 def git_config():
     name = input("Real name (default: Diego Chavão): ") or "Diego Chavão"
     email = input("E-mail: ")
@@ -39,22 +56,26 @@ def git_config():
     print('Git config installed successfully')
 
 
+@confirm('Git ignore global')
 def gitignore_global():
     os.system('cp templates/gitignore_global $HOME/.gitignore_global')
 
     print('Gitignore global installed successfully')
 
 
+@confirm('AwesomeWM settings')
 def awesome():
     os.system('curl -k https://raw.githubusercontent.com/Chavao/awesome/master/install.sh | sh')
     print('Awesome installed successfully')
 
 
+@confirm('Vimfiles')
 def vimfiles():
     os.system('curl -k https://raw.githubusercontent.com/Chavao/vimfiles/master/install.sh | sh')
     print('Vimfiles installed successfully')
 
 
+@confirm('Prezto settings')
 def prezto():
     os.system('curl -k https://raw.githubusercontent.com/Chavao/prezto/master/install.sh | sh')
     print('Prezto installed successfully')
