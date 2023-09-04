@@ -8,6 +8,7 @@ alias grepi='grep -i'
 alias .='source'
 
 # Commands
+alias vim='nvim'
 alias wget='wget -c -T5'
 alias dig='dig +nostats +nocomments +nocmd'
 alias pass='gnome-keyring-daemon -r -d'
