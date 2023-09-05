@@ -22,6 +22,9 @@ def basic_tools():
     print('Installing linux tools')
     os.system('sudo apt install -y xclip neovim git pandoc lynx xdotool flameshot blueman fonts-firacode tilix')
 
+    print('Installing ncspot (Spotify cli)')
+    os.system('snap install --edge ncspot')
+
     print('Creating non-git aliases file')
     os.system('mkdir -p $HOME/Projects')
     os.system('cp templates/aliases $HOME/.aliases')
