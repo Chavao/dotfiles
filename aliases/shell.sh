@@ -15,8 +15,9 @@ alias pass='gnome-keyring-daemon -r -d'
 alias xclip='xclip -selection c'
 
 # Folders
-alias down='cd ~/Downloads'
-alias desk='cd ~/Desktop'
+alias down='cd $HOME/Downloads'
+alias desk='cd $HOME/Desktop'
+alias doc='cd $HOME/Documents'
 
 # Tools
 alias weather='curl -4 "https://wttr.in/Freguesia"'
