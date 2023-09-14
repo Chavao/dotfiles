@@ -1,0 +1,31 @@
+#!/bin/env python
+
+import calendar
+from datetime import datetime
+
+
+def clear():
+    import os
+    os.system("clear")
+
+
+def padding(c):
+    def wrapper():
+        print("\n")
+        c()
+        print("\n")
+
+    return wrapper
+
+
+@padding
+def show_calendar():
+    today = datetime.today()
+    year = today.year
+
+    calendar.prcal(year)
+
+
+if __name__ == "__main__":
+    clear()
+    show_calendar()
