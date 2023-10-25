@@ -34,6 +34,7 @@ def basic_tools():
     os.system('ln -sf $HOME/dotfiles/settings/tilix/default.json $HOME/.config/tilix/schemes/default.json')
 
     print('Setting up LXQt')
+    os.system('mv $HOME/.config/lxqt $HOME/.config/lxqt-before-chavao-dotfiles')
     os.system('ln -sf $HOME/dotfiles/settings/lxqt $HOME/.config/lxqt')
 
     print('Basic tools installed successfully')
