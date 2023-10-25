@@ -53,7 +53,8 @@ def git_config():
                 "{{EMAIL}}", email
             )
 
-    with open('$HOME/.gitconfig', 'w+') as f:
+    home_folder = os.getenv('HOME')
+    with open(f'{home_folder}/.gitconfig', 'w+') as f:
         f.write(file_content)
 
     print('Git config installed successfully')
