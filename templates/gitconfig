@@ -25,5 +25,7 @@
     keepBackup = false
 [pull]
     rebase = true
+[url "git@github.com:"]
+    insteadOf = https://github.com/
 [cola]
     spellcheck = false
