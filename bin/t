@@ -1,0 +1,8 @@
+#!/bin/sh
+
+clear ; gotestsum --format testname
+
+while true
+do
+    inotifywait -qq -r -e create,close_write,modify,move,delete ./ && clear ; gotestsum --format testname
+done
