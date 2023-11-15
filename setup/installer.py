@@ -29,6 +29,7 @@ def basic_tools():
     print('Setting up Tilix')
     os.system('mkdir -p $HOME/.config/tilix/schemes')
     os.system('ln -sf $HOME/dotfiles/settings/tilix/default.json $HOME/.config/tilix/schemes/default.json')
+    os.system('dconf load /com/gexperts/Tilix/ < $HOME/dotfiles/settings/tilix/tilix.dconf')
 
     print('Setting up LXQt')
     os.system('mv $HOME/.config/lxqt $HOME/.config/lxqt-before-chavao-dotfiles')
