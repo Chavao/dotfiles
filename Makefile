@@ -1,4 +1,4 @@
-.PHONY: setup dependencies install
+.PHONY: setup dependencies install dump-tilix-dconf
 
 setup: dependencies install
 
@@ -7,3 +7,6 @@ dependencies:
 
 install:
 	@python setup/installer.py
+
+dump-tilix-dconf:
+	@dconf dump /com/gexperts/Tilix/ > $(HOME)/dotfiles/settings/tilix/tilix.dconf
