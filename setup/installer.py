@@ -20,7 +20,7 @@ def confirm(name):
 @confirm('Basic tools')
 def basic_tools():
     print('Installing linux tools')
-    os.system('sudo apt install -y xclip neovim git pandoc lynx xdotool flameshot blueman fonts-firacode tilix git-cola inotify-tools')
+    os.system('sudo apt install -y xclip neovim git pandoc lynx xdotool flameshot blueman fonts-firacode tilix git-cola')
 
     print('Installing ncspot (Spotify cli)')
     os.system('snap install --edge ncspot')
