@@ -20,7 +20,7 @@ def confirm(name):
 @confirm('Basic tools')
 def basic_tools():
     print('Installing linux tools')
-    os.system('sudo apt install -y xclip neovim git pandoc lynx xdotool flameshot blueman fonts-firacode tilix git-cola')
+    os.system('sudo apt install -y xclip neovim git xdotool flameshot blueman fonts-firacode tilix git-cola')
 
     print('Creating non-git aliases file')
     os.system('mkdir -p $HOME/Projects')
