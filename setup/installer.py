@@ -94,13 +94,21 @@ def prezto():
     print('Prezto installed successfully')
 
 
+@confirm('Homebrew')
+def brew():
+    os.system('/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"')
+    os.system('(echo; echo \'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"\') >> $HOME/.zshrc')
+    print('Homebrew installed successfully')
+
+
 _FUNCTIONS = [
     basic_tools,
     git_config,
     gitignore_global,
     awesome,
     vimfiles,
-    prezto
+    prezto,
+    brew
 ]
 
 def main():
@@ -111,6 +119,7 @@ def main():
         '🤩 Awesome',
         '💻 Vimfiles',
         '💲 Prezto',
+        '🍺 Homebrew',
         '👋 Exit'
     ]
     terminal_menu = TerminalMenu(options)
