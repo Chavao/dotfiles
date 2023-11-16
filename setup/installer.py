@@ -17,23 +17,33 @@ def confirm(name):
     return actual_decorator
 
 
-@confirm('Basic tools')
-def basic_tools():
-    print('Installing linux tools')
-    os.system('sudo apt install -y xclip neovim git xdotool flameshot blueman fonts-firacode tilix git-cola')
-
+def _non_git():
     print('Creating non-git aliases file')
     os.system('mkdir -p $HOME/Projects')
     os.system('cp templates/aliases $HOME/.aliases')
 
+
+def _tilix():
     print('Setting up Tilix')
     os.system('mkdir -p $HOME/.config/tilix/schemes')
     os.system('ln -sf $HOME/dotfiles/settings/tilix/default.json $HOME/.config/tilix/schemes/default.json')
     os.system('dconf load /com/gexperts/Tilix/ < $HOME/dotfiles/settings/tilix/tilix.dconf')
 
+
+def _lxqt():
     print('Setting up LXQt')
     os.system('mv $HOME/.config/lxqt $HOME/.config/lxqt-before-chavao-dotfiles')
     os.system('ln -sf $HOME/dotfiles/settings/lxqt $HOME/.config/lxqt')
+
+
+@confirm('Basic tools')
+def basic_tools():
+    print('Installing linux tools')
+    os.system('sudo apt install -y xclip neovim git xdotool flameshot blueman fonts-firacode tilix git-cola')
+
+    _non_git()
+    _tilix()
+    _lxqt()
 
     print('Basic tools installed successfully')
 
