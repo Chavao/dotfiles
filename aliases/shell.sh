@@ -13,6 +13,7 @@ alias wget='wget -c -T5'
 alias dig='dig +nostats +nocomments +nocmd'
 alias pass='gnome-keyring-daemon -r -d'
 alias xclip='xclip -selection c'
+alias x='xmodmap $HOME/.Xmodmap; exit'
 
 # Folders
 alias down='cd $HOME/Downloads'
