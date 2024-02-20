@@ -9,6 +9,7 @@ _RESET = '\x1b[0m'
 def _format_url(url):
     url = re.sub(":", '/', url)
     url = re.sub("^.*@", 'https://', url)
+    url = re.sub("\.git$", '', url)
     return url.strip()
 
 def _format_key(key):
