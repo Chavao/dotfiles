@@ -26,8 +26,11 @@ try:
         if not key.startswith('submodule'):
             try:
                 url = config.get(key, "url")
+                url = _format_url(url)
+                key = _format_key(key)
 
-                print(f"{_CYAN}{_format_key(key)}{_RESET}: {_format_url(url)}")
+                print(f"{_CYAN}{key}{_RESET}: {url}")
+                print(f"{_CYAN}pulls{_RESET}: {url}/pulls\n")
             except:
                 pass
 except:
