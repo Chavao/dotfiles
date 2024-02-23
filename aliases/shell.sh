@@ -14,6 +14,7 @@ alias dig='dig +nostats +nocomments +nocmd'
 alias pass='gnome-keyring-daemon -r -d'
 alias xclip='xclip -selection c'
 alias x='xmodmap $HOME/.Xmodmap; exit'
+alias ifconfig="ip -c a | sed -e 's/\// \//g'"
 
 # Folders
 alias down='cd $HOME/Downloads'

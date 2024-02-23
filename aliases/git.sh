@@ -17,4 +17,3 @@ alias gbb='git bisect bad'
 alias gbg='git bisect good'
 alias gd='git diff --color | diff-so-fancy'
 alias shortlog='git shortlog -n -s'
-alias ifconfig="ip -c a | sed -e 's/\// \//g'"
