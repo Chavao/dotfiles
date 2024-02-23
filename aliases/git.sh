@@ -5,6 +5,7 @@ alias gco='git checkout'
 alias gc='git commit -m'
 alias ga='git add'
 alias gb='git branch'
+alias gcb='git checkout -b'
 alias gl='git log'
 alias gp='git pull'
 alias glog="git log \
