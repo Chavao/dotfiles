@@ -22,5 +22,4 @@ alias desk='cd $HOME/Desktop'
 alias doc='cd $HOME/Documents'
 
 # Tools
-alias weather='curl -4 "https://wttr.in/Freguesia"'
 alias myip='curl https://ifconfig.me'
