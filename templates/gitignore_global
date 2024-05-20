@@ -3,4 +3,5 @@
 .DS_Store*
 node_modules/
 __pycache__/
-rest.http
+*.local.http
+*.local.md
