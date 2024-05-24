@@ -39,7 +39,7 @@ def _lxqt():
 @confirm('Basic tools')
 def basic_tools():
     print('Installing linux tools')
-    os.system('sudo apt install -y xclip neovim git xdotool flameshot blueman fonts-firacode tilix git-cola xscreensaver-gl-extra xscreensaver-data-extra figlet jq')
+    os.system('sudo apt install -y xclip neovim git xdotool flameshot blueman fonts-firacode tilix git-cola xscreensaver-gl-extra xscreensaver-data-extra figlet jq htop')
     _non_git()
     _tilix()
     _lxqt()
