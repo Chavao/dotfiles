@@ -5,3 +5,5 @@ node_modules/
 __pycache__/
 *.local.http
 *.local.md
+_chavao_notes/
+_chavao_scripts/
