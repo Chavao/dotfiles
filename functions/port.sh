@@ -1,7 +1,7 @@
 function pport {
-   lsof -t -i :"$1";
+   sudo lsof -t -i :"$1";
 }
 
 function kport {
-  kill `pport "$1"`;
+  sudo lsof -t -i :"$1" | xargs sudo kill -9
 }
