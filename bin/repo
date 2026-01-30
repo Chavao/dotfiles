@@ -7,15 +7,15 @@ _CYAN = '\x1b[36m'
 _RESET = '\x1b[0m'
 
 def _format_url(url):
-    url = re.sub(":", '/', url)
-    url = re.sub("^.*@", 'https://', url)
-    url = re.sub("\.git$", '', url)
+    url = re.sub(r":", '/', url)
+    url = re.sub(r"^.*@", 'https://', url)
+    url = re.sub(r"\.git$", '', url)
     return url.strip()
 
 def _format_key(key):
-    key = re.sub('"', '', key)
-    key = re.sub('branch', '', key)
-    key = re.sub('remote', '', key)
+    key = re.sub(r'"', '', key)
+    key = re.sub(r'branch', '', key)
+    key = re.sub(r'remote', '', key)
     return key.strip()
 
 try:
