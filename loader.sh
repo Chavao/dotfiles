@@ -15,5 +15,6 @@ esac
 
 for i in $HOME/dotfiles/{functions,aliases}/*.sh; do source $i; done
 
+export VISUAL="nvim"
 export EDITOR="nvim"
 export PATH="$PATH:$HOME/dotfiles/bin"
