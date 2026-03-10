@@ -10,10 +10,12 @@ alias .='source'
 # Commands
 alias vim='/opt/nvim/bin/nvim'
 alias wget='wget -c -T5'
+alias curl='curl -sS'
 alias dig='dig +nostats +nocomments +nocmd'
 alias pass='gnome-keyring-daemon -r -d'
 alias xclip='xclip -selection c'
 alias x='xmodmap $HOME/.Xmodmap; if [[ -z $TMUX ]]; then exit; else tmux detach; fi'
+alias "/q"='x'
 alias ifconfig="ip -c a | sed -e 's/\// \//g'"
 
 # Folders
