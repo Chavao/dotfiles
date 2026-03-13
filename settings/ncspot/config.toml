@@ -1,0 +1,22 @@
+[theme]
+background = "black"
+primary = "light white"
+secondary = "light black"
+title = "#0aaaff"
+playing = "#0aaaff"
+playing_selected = "light #0aaaff"
+playing_bg = "black"
+highlight = "light white"
+highlight_bg = "#484848"
+error = "light white"
+error_bg = "red"
+statusbar = "black"
+statusbar_progress = "#0aaaff"
+statusbar_bg = "#0aaaff"
+cmdline = "light white"
+cmdline_bg = "black"
+search_match = "light red"
+
+[keybindings]
+"Ctrl+q" = "quit"
+"q" = "back"
