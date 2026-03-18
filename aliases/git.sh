@@ -8,8 +8,8 @@ alias gb='git branch'
 alias gcb='git checkout -b'
 alias gl='git log'
 alias gp='git pull'
-alias glog="git log --all --decorate=short --abbrev-commit --date=relative \
-  --pretty=format:'%C(bold red)%<(7,trunc) %h%Creset │ %C(green)%<(14,trunc)%cr%Creset │ %C(blue)%<(16,trunc)%an%Creset │ %C(magenta)%<(26,trunc)%ae%Creset │ %C(white)%s%Creset %C(dim yellow)%d%Creset'"
+alias glog="git log \
+    --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gcm='git checkout main'
 alias gcd='git checkout develop'
 alias gbb='git bisect bad'
