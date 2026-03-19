@@ -14,9 +14,13 @@ alias curl='curl -sS'
 alias dig='dig +nostats +nocomments +nocmd'
 alias pass='gnome-keyring-daemon -r -d'
 alias xclip='xclip -selection c'
+alias ifconfig="ip -c a | sed -e 's/\// \//g'"
+
+# Close commands
 alias x='xmodmap $HOME/.Xmodmap; if [[ -z $TMUX ]]; then exit; else tmux detach; fi'
 alias "/q"='x'
-alias ifconfig="ip -c a | sed -e 's/\// \//g'"
+alias ":q"='x'
+alias ":Q"='x'
 
 # Folders
 alias down='cd $HOME/Downloads'
