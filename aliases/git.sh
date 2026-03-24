@@ -9,7 +9,7 @@ alias gcb='git checkout -b'
 alias gl='git log'
 alias gp='git pull'
 alias glog="git log \
-    --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+    --graph --pretty=format:'%C(#FF0000)%h%Creset -%C(#FFC107)%d%Creset %s %C(#00FF00)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gcm='git checkout main'
 alias gcd='git checkout develop'
 alias gbb='git bisect bad'
